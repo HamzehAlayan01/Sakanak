@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Sakanak | Contact Us</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   
+    
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+   
+    
+    
+    
+   
+  
+
+  </head>
+  <body>
+  
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                    0772645665
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span> sakanak123@gmail.com
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <% if (!isAuthenticated) { %>
+                    <a href="signin.html" class="aa-register">Login</a>
+                    <a href="register.html" class="aa-login">Register</a>
+                  <% } %>
+                  <button id="logoutBtn" onclick="logout()">Logout</button>
+                  <!-- <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+          <a class="navbar-brand aa-logo" href="/index"><span>SAKANAK</span></a>
+          <!-- Image based logo -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="/index">HOME</a></li>
+             <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">                
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/MyProperties">MY PROPERTIES</a></li>                                            
+              </ul>
+            </li>
+            <li><a href="/Roommates">ROOMMATES</a></li>           
+            <li class="active"><a href="/Support">CONTACT US</a></li>
+            <li><a href="/AddListing">ADD LISTING</a></li> 
+            <li><a href="/MyProfile">MY PROFILE</a></li>       
+                    
+          </ul>                          
+        </div><!--/.nav-collapse -->       
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>CONTACT US</h2>
+            <ol class="breadcrumb">
+            <li><a href="#">HOME</a></li>            
+            <li class="active">CONTACT US</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+
+ <section id="aa-contact">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+          <div class="aa-contact-area">
+            <div class="aa-contact-bottom">
+              <div class="aa-contact-top-left">                      
+              </div>
+              <div class="aa-contact-top-right">
+                <h2 style="text-align: center;">REACH US HERE</h2>
+                <ul style="text-align: center;" class="contact-info-list">
+                  <li> <i class="fa fa-map-marker"></i> SAKANAK 3030, Al-Ramtha</li>
+                  <li> <i class="fa fa-envelope-o"></i> sakanak123@gmail.com</li>                 
+                  <li> <i class="fa fa-phone"></i> 0772645665</li>
+                </ul>
+              </div>
+            </div>
+            <div class="aa-contact-bottom">
+              <div class="aa-title">
+                <h2>CONTACT US  </h2>
+                <p>Send us your questions, complaints, or reviews!</p>
+                <span></span>
+                <!-- <p>Your email address will not be published. Required fields are marked <strong class="required">*</strong></p> -->
+              </div>
+              <div class="aa-contact-form">
+                <form class="contactform" method="POST" action="/send-email">                  
+                  <!-- <p class="comment-form-author">
+                    <label for="author">Name <span class="required">*</span></label>
+                    <input type="text" name="author" value="<%= username %>" size="30" required="required">
+                  </p>
+                  <p class="comment-form-email">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" name="email"  value="<%= email %>"  aria-required="true" required="required">
+                  </p> -->
+                  <p class="comment-form-url">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject">  
+                  </p>
+                  <p class="comment-form-comment">
+                    <label for="comment">Message</label>
+                    <textarea name="comment" cols="45" rows="8" aria-required="true" required="required"></textarea>
+                  </p>                
+                  <p class="form-submit">
+                    <input type="submit" name="submit"  id="sendmsg" class="aa-browse-btn" value="Send Message">
+                  </p>        
+                </form>
+              </div>
+            </div>
+          </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p><a rel="nofollow" href="index.html">SAKANAK</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="/index">Home</a>
+                <a href="/Support">Contact Us</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Display confirmation dialog
+      var confirmLogout = confirm('Are you sure you want to logout?');
+  
+      // If user confirms logout, send a POST request to the logout endpoint
+      if (confirmLogout) {
+        fetch('/logout', { method: 'POST' })
+          .then(function(response) {
+            if (response.ok) {
+              // Redirect to the login page or handle success as needed
+              window.location.href = '/signin.html';
+            } else {
+              // Handle error
+              console.log('Logout failed.');
+            }
+          })
+          .catch(function(error) {
+            // Handle error
+            console.log('Logout failed: ' + error.message);
+          });
+      }
+    });
+  </script>
+   <script>
+    document.getElementById('sendmsg').addEventListener('click', function() {
+      alert('Message Sent Successfully');
+    });
+  </script>
+  </body>
+</html>

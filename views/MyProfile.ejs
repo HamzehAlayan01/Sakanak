@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Sakanak | My Profile</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    
+   
+  
+
+  </head>
+  <body>
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                   0772645665
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span>sakanak123@gmail.com
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <% if (!isAuthenticated) { %>
+                    <a href="signin.html" class="aa-register">Login</a>
+                    <a href="register.html" class="aa-login">Register</a>
+                  <% } %>
+                  <button id="logoutBtn" onclick="logout()">Logout</button>
+                  <!-- <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+          <a class="navbar-brand aa-logo" href="/index"><span>SAKANAK</span></a>
+          <!-- Image based logo -->
+          <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="/index">HOME</a></li>
+             <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/poperties">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">                
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/MyProperties"> MY PROPERTIES</a></li>                                             
+              </ul>
+            </li>
+            <li><a href="/Roommates">ROOMMATES</a></li>
+            <li><a href="/Support">CONTACT US</a></li>
+            <li><a href="/AddListing">ADD LISTING</a></li> 
+            <li class="active"><a href="/MyProfile">MY PROFILE</a></li>       
+           
+          </ul>                          
+        </div><!--/.nav-collapse -->       
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start Proerty header  -->
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>MY PROFILE</h2>
+            <ol class="breadcrumb">
+            <li><a href="#">HOME</a></li>            
+            <li class="active">MY PROFILE</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+<section>
+
+  <div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"></span><span class="text-black-50">Example@gmail.com</span><span> </span></div>
+        </div>
+        <form id="profileForm" class="col-md-5 border-right">
+          <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    
+
+
+                </div>
+                <br>
+                <div class="row mt-2">
+                  
+                    <div class="col-md-6"><label class="labels">Name</label><input required type="text" name="firstName" class="form-control" placeholder="first name" value="<%= user.firstName %>"></div>
+                    <div class="col-md-6"><label class="labels">Last Name</label><input required type="text" name="lastName" class="form-control" value="<%= user.lastName %>" placeholder="Last name"></div>
+                </div>
+                <br>
+                <style>
+                  .form-group {
+                      margin-bottom: 10px;
+                  }
+              </style>
+              
+              <div class="row mt-3">
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Mobile Number</label>
+                      <input required type="text" class="form-control" name="phoneNumber" placeholder="Enter phone number" value="<%= user.phoneNumber %>">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Age</label>
+                      <input required type="number" class="form-control" name="age" placeholder="Enter your age" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Gender</label>
+                      <input required type="text" class="form-control" name="gender" placeholder="Male/Female" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Budget</label>
+                      <input required type="number" class="form-control"  name="budget" placeholder="Enter your budget" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">State</label>
+                      <input required type="text" class="form-control" name="state" placeholder="Enter your state" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Area</label>
+                      <input required type="text" class="form-control" name="area" placeholder="Enter your area" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label class="labels">Email</label>
+                      <input required type="text" class="form-control" name="email" placeholder="Enter your email" value="">
+                  </div>
+                  <div class="col-md-12 form-group">
+                      <label for="description">Description:</label>
+                      <br>
+                      <textarea id="description" name ="description" rows="2" cols="49"></textarea>
+                      <br><br>
+                  </div>
+              </div>
+              <button class="btn btn-primary profile-button" type="submit">Save Profile</button>
+
+              <!-- <button class="btn btn-primary profile-button" type="submit" onclick="saveProfile(event)">Save Profile</button> -->
+            </div>
+            <br>
+        </form>        
+    </div>
+  </div>
+
+</section>
+
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p><a rel="nofollow" href="index.html">SAKANAK</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="/index">Home</a>
+                <a href="/support">Contact Us</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Display confirmation dialog
+      var confirmLogout = confirm('Are you sure you want to logout?');
+  
+      // If user confirms logout, send a POST request to the logout endpoint
+      if (confirmLogout) {
+        fetch('/logout', { method: 'POST' })
+          .then(function(response) {
+            if (response.ok) {
+              // Redirect to the login page or handle success as needed
+              window.location.href = '/signin.html';
+            } else {
+              // Handle error
+              console.log('Logout failed.');
+            }
+          })
+          .catch(function(error) {
+            // Handle error
+            console.log('Logout failed: ' + error.message);
+          });
+      }
+    });
+  </script>
+ <script>
+  // Function to save the form data
+  function saveProfile(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the form element
+    var form = document.getElementById('profileForm');
+
+    // Get the form data
+    var formData = new FormData(form);
+
+    // Convert the form data to a plain object
+    var profileData = Object.fromEntries(formData.entries());
+
+    // Save the profile data to localStorage or send it to the server
+    localStorage.setItem('profileData', JSON.stringify(profileData));
+    window.alert('Profile saved successfully!');
+
+  }
+
+  // Function to load the saved profile data
+  function loadProfile() {
+    // Get the saved profile data from localStorage
+    var savedData = localStorage.getItem('profileData');
+
+    // If there is saved data, populate the form fields
+    if (savedData) {
+      var profileData = JSON.parse(savedData);
+
+      // Loop through the form fields and set their values
+      var formElements = document.getElementById('profileForm').elements;
+      for (var i = 0; i < formElements.length; i++) {
+        var fieldName = formElements[i].name;
+        if (profileData.hasOwnProperty(fieldName)) {
+          formElements[i].value = profileData[fieldName];
+        }
+      }
+    }
+  }
+
+  document.getElementById('profileForm').addEventListener('submit', function(event) {
+  saveProfile(event);
+});
+  // Load the saved profile data when the page loads
+  loadProfile();
+</script>
+  </body>
+</html>

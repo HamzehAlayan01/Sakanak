@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Sakanak | Home</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+
+    <style>
+      #s{
+        margin-right:75px;
+        margin-left:250px;
+      }
+      #c{
+        margin-left:50px;
+        margin-right:50px;
+      }
+      #n{
+        margin-left:75px;
+      }
+      #vm{
+        margin-top:50px;
+      }
+      #fml{
+        color:#89CFF0;
+      }
+      
+      
+      
+    </style>
+
+  </head>
+  <body class="aa-price-range">  
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                    0772645665
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span> sakanak123@gmail.com
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <!-- <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a> -->
+                  <% if (!isAuthenticated) { %>
+                    <a href="signin.html" class="aa-register">Login</a>
+                    <a href="register.html" class="aa-login">Register</a>
+                  <% } else { %>
+                    <button id="logoutBtn" onclick="logout()">Logout</button>
+                  <% } %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+           <a class="navbar-brand aa-logo" href="/index"> <span>SAKANAK</span></a>
+           <!-- Image based logo -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li class="active"><a href="/index">HOME</a></li>
+             <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">                
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/MyProperties">MY PROPERTIES</a></li>                                           
+              </ul>
+            </li>
+            <li><a href="/Roommates">ROOMMATES</a></li>                                         
+            <li class="dropdown">
+            </li>
+            <li><a href="/Support">CONTACT US</a></li>
+           <li><a href="/AddListing">ADD LISTING</a></li>
+           <li><a href="/MyProfile">MY PROFILE</a></li>
+                                                                       
+          </ul>                            
+        </div><!--/.nav-collapse -->       
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start slider  -->
+  <section id="aa-slider">
+    <div class="aa-slider-area"> 
+      <!-- Top slider -->
+      <div class="aa-top-slider">
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider3.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Studio</span>
+            <h2 class="aa-top-slider-title">90M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Rainbow Street - near University of Jordan, Amman</p>
+            <p class="aa-top-slider-price">150JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider1.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Duplex</span>
+            <h2 class="aa-top-slider-title">100M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker">Sweifieh - near University of Jordan, Amman</i></p>
+            <p class="aa-top-slider-price">200JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider2.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Studio</span>
+            <h2 class="aa-top-slider-title">120M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Irbid City Center - near Yarmouk University, Irbid</p>
+            <p class="aa-top-slider-price">250JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->       
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider4.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Duplex</span>
+            <h2 class="aa-top-slider-title">150M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Al-Hassan Industrial City - near Al-Hussein Bin Talal University, Ma'an</p>          
+            <p class="aa-top-slider-price">280JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->        
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider5.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Duplex</span>
+            <h2 class="aa-top-slider-title">140M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Yajouz - near Jordan University of Science and Technology, Irbid</p>
+            <p class="aa-top-slider-price">300JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="img/slider/slider6.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Studio</span>
+            <h2 class="aa-top-slider-title">120M<sup>2</sup></h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Downtown Irbid - near Yarmouk University, Irbid</p>
+            <p class="aa-top-slider-price">190JOD</p>
+            <a href="#" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+      </div>
+    </div>
+  </section>
+  <!-- End slider  -->
+
+ <!-- Advance Search -->
+ <section id="aa-advance-search">
+  <div class="container">
+    <div class="aa-advance-search-area">
+      <div class="form">
+        <form id="searchForm" action="/properties" method="GET">
+          <div class="aa-advance-search-top">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="aa-single-advance-search">
+                  <input type="text" name="neighbourhood" id="n" placeholder="Neighbourhood">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input type="text" name="category" id="c" placeholder="e.g. duplex">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input class="aa-search-btn" id="s" type="submit" value="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aa-advance-search-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="aa-single-filter-search">
+                  <span>AREA (M)<sup>2</sup></span>
+                  <span>FROM</span>
+                  <input type="number" name="areaLower" id="skip-value-lower" class="example-val" value="">
+                  <span>TO                   <input type="number" name="areaUpper" id="skip-value-upper" class="example-val" value="">
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="aa-single-filter-search">
+                  <span>PRICE (JOD)</span>
+                  <span>FROM</span>
+                  <input type="number" name="priceLower" id="skip-value-lower2" class="example-val" value="">
+                  <span>TO<input type="number" name="priceUpper" id="skip-value-upper2" class="example-val" value="">
+                  </span>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- About us -->
+  <section id="aa-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-about-us-area">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="aa-about-us-left">
+                  <img src="img/college students.jpg" alt="image">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="aa-about-us-right">
+                  <div class="aa-title">
+                    <h2>About Us</h2>
+                    <span></span>
+                  </div>
+                  <p>At Sakanak, we understand the importance of finding the perfect student housing that meets your needs and enhances your college experience. As a trusted provider of student accommodation, we take pride in offering a comprehensive range of services to ensure you have a comfortable and enjoyable stay throughout your academic journey. Let us introduce you to what sets us apart.</p>                  
+                  <ul>
+                    <li>Diverse Housing Options.</li>
+                    <li>Find Your Roommate.</li>
+                    <li>Convenient Location.</li>                    
+                    <li>Modern Amenities.</li>
+                    <li>Dedicated Support.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / About us -->
+
+  <!-- Latest property -->
+  <section id="aa-latest-property">
+    <div class="container">
+      <div class="aa-latest-property-area">
+        <div class="aa-title">
+          <h2>Latest Properties</h2>                  
+        </div>
+        <div class="aa-latest-properties-content">
+          <div class="row">
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room1.jpg" alt="img">
+                </a>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>3 Rooms</span>
+                    <span>1 Kitchen</span>
+                    <span>2 Bathrooms</span>
+                    <span>150M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Rainbow Street - Apartment near University of Jordan</a></h3>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      300JOD
+                    </span>
+                    <a href="/properties-detail" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room2.jpg" alt="img">
+                </a>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>3 Rooms</span>
+                    <span>1 Kitchen</span>
+                    <span>1 Bathroom</span>
+                    <span>60M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#"></a>Sweifieh - Duplix near University of Jordan</h3>                     
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      180JOD
+                    </span>
+                    <a href="properties-detail.ejs" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room3.jpg" alt="img">
+                </a>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>2 Rooms</span>
+                    <span>1 Kitchen</span>
+                    <span>2 Bathrooms</span>
+                    <span>110M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Irbid City Center - Studio near Yarmouk University</a></h3>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      230JOD
+                    </span>
+                    <a href="properties-detail.ejs" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room4.jpeg" alt="img">
+                </a>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>4 Rooms</span>
+                    <span>2 Kitchen</span>
+                    <span>3 Bathrooms</span>
+                    <span>300M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Al-Hassan Industrial City - Duplix near Al-Hussein Bin Talal University</a></h3>                     
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      250JOD
+                    </span>
+                    <a href="properties-detail.ejs" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room5.jpg" alt="img">
+                </a>                
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>2 Rooms</span>
+                    <span>1 Kitchen</span>
+                    <span>1 Bathroom</span>
+                    <span>90M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Yajouz - Studio near Jordan University of Science and Technology</a></h3>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      130JOD
+                    </span>
+                    <a href="properties-detail.ejs" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                <a href="#" class="aa-properties-item-img">
+                  <img src="img/latest property/room6.jpg" alt="img">
+                </a>
+                <div class="aa-properties-item-content">
+                  <div class="aa-properties-info">
+                    <span>1 Rooms</span>
+                    <span>1 Kitchen</span>
+                    <span>1Bathrooms</span>
+                    <span>60M<sup>2</sup></span>
+                  </div>
+                  <div class="aa-properties-about">
+                    <h3><a href="#">Downtown Irbid - near Yarmouk University</a></h3>                      
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      260JOD
+                    </span>
+                    <a href="properties-detail.ejs" class="aa-secondary-btn">View Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aa-title" id="vm">
+      <h2> <a href="/properties" class="aa-view-more-btn"  id="fml">View More</a></h2>                  
+    </div>
+   
+
+  </section>
+  <!-- / Latest property -->
+
+  <!-- Service section -->
+  <section id="aa-service">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-service-area">
+            <div class="aa-title">
+              <h2>Book your perfect accommodation</h2>
+              <span></span>
+              <p>Take the hassle out of securing your student home for the best years of your life.</p>
+            </div>
+            <!-- service content -->
+            <div class="aa-service-content">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="aa-single-service">
+                    <div class="aa-service-icon">
+                      <span class="fa fa-home"></span>
+                    </div>
+                    <div class="aa-single-service-content">
+                      <h4><a href="#">Fast & Easy Bookings</h4>
+                      <p>Time is money. Save both when you book with us.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="aa-single-service">
+                    <div class="aa-service-icon">
+                      <span class="fa fa-crosshairs"></span>
+                    </div>
+                    <div class="aa-single-service-content">
+                      <h4><a href="#">Property Rent</a></h4>
+                      <p>Property rentals made easy.</p>
+                    </div>
+                  </div>
+                </div>               
+                <div class="col-md-3">
+                  <div class="aa-single-service">
+                    <div class="aa-service-icon">
+                      <span class="fa fa-check"></span>
+                    </div>
+                    <div class="aa-single-service-content">
+                      <h4><a href="#">Verified Listings</a></h4>
+                      <p>What you see is what you get. Our promise.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="aa-single-service">
+                    <div class="aa-service-icon">
+                      <span class="fa fa-bar-chart-o"></span>
+                    </div>
+                    <div class="aa-single-service-content">
+                      <h4><a href="#">Price Match Guarantee</a></h4>
+                      <p>Find a lower price and we'll match it. No questions asked.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+        
+  <!-- / Service section -->
+
+  <!-- Promo Banner Section -->
+  <section id="aa-promo-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-promo-banner-area">
+            <h3>Find Your Roommate</h3>
+            <p>Connect with compatible roommates effortlessly! Create a profile, set your preferences, and discover the ideal roommate to make your college experience unforgettable.</p>
+            <a href="/Roommates" class="aa-view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Promo Banner Section -->
+
+  <!-- Our Agent Section-->
+  <section id="aa-agents">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-agents-area">
+            <div class="aa-title">
+              <h2>Our Landlords</h2>
+              <span></span>
+              <p>A selected group of landlords using our website</p>
+            </div>
+            <!-- agents content -->
+            <div class="aa-agents-content">
+              <ul class="aa-agents-slider">
+                <li>
+                  <div class="aa-single-agents">
+                    <div class="aa-agents-img">
+                      <img src="img/landlord1.jpeg" alt="agent member image">
+                    </div>
+                    <div class="aa-agetns-info">
+                      <h4><a href="#">Ahmad Darwish</a></h4>
+                      <span>Top Agent</span>
+                      <div class="aa-agent-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="aa-single-agents">
+                    <div class="aa-agents-img">
+                      <img src="img/landlord2.jpeg" alt="agent member image">
+                    </div>
+                    <div class="aa-agetns-info">
+                      <h4><a href="#">Karen	Lyman</a></h4>
+                      <span>Expert Agent</span>
+                      <div class="aa-agent-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="aa-single-agents">
+                    <div class="aa-agents-img">
+                      <img src="img/landlord3.jpeg" alt="agent member image">
+                    </div>
+                    <div class="aa-agetns-info">
+                      <h4><a href="#">Paul Walker</a></h4>
+                      <span>Top Agent</span>
+                      <div class="aa-agent-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="aa-single-agents">
+                    <div class="aa-agents-img">
+                      <img src="img/landlord4.png" alt="agent member image">
+                    </div>
+                    <div class="aa-agetns-info">
+                      <h4><a href="#">John Smith</a></h4>
+                      <span>Jr. Agent</span>
+                      <div class="aa-agent-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-single-agents">
+                    <div class="aa-agents-img">
+                      <img src="img/landlord5.jpg" alt="agent member image">
+                    </div>
+                    <div class="aa-agetns-info">
+                      <h4><a href="#">Michelle	Powell</a></h4>
+                      <span>Jr. Agent</span>
+                      <div class="aa-agent-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                      </div>
+                    </div>
+                  </div>                                                          
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Our Agent Section-->
+
+  <!-- Client Testimonial -->
+  <section id="aa-client-testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-client-testimonial-area">
+            <div class="aa-title">
+              <h2>See what our students say</h2>
+              <span></span>
+              <p>Preferred place for booking housing by students all across Jordan</p>
+            </div>
+            <!-- testimonial content -->
+            <div class="aa-testimonial-content">
+              <!-- testimonial slider -->
+              <ul class="aa-testimonial-slider">
+                <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="img/client1.jpg" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>“Experience was amazing!! I’m going to the University of Jordan. Great prices & the rent durations are negotiable. Also as an art student I do appreciate the website design its clear, visible & well placed.”</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Trevor	Buckland</p>
+                      <span>Art</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="img/client2.jpg" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>“The best service I could ask for an international student. Awesome, great follow-up services that helped me throughout the process from start to the end. Thanks to Sakanak for a great facility!”</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Diana Jaber</p>
+                      <span>Web Designer</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="img/client3.jpg" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>“I am going to study at JUST and Sakanak did an excellent job in helping me. I recommend Sakanak as a student helper.”</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Ibrahim Alasal</p>
+                      <span>Architecture Engineering</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Testimonial -->
+
+  <!-- Client brand -->
+  
+  <!-- / Client brand -->
+
+  <!-- Latest blog -->
+  
+  <!-- / Latest blog -->
+
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p><a rel="nofollow" href="index.ejs">SAKANAK</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="/index">Home</a>
+                <a href="/Support">Contact Us</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+ 
+  
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Display confirmation dialog
+      var confirmLogout = confirm('Are you sure you want to logout?');
+  
+      // If user confirms logout, send a POST request to the logout endpoint
+      if (confirmLogout) {
+        fetch('/logout', { method: 'POST' })
+          .then(function(response) {
+            if (response.ok) {
+              // Redirect to the login page or handle success as needed
+              window.location.href = '/signin.html';
+            } else {
+              // Handle error
+              console.log('Logout failed.');
+            }
+          })
+          .catch(function(error) {
+            // Handle error
+            console.log('Logout failed: ' + error.message);
+          });
+      }
+    });
+  </script>
+  </body>
+  
+</html>

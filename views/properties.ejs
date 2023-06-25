@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Sakanak | Properties</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+
+  
+    <style> 
+    
+    
+      #s{
+        margin-right:75px;
+        margin-left:250px;
+      }
+      #c{
+        margin-left:50px;
+        margin-right:50px;
+      }
+      #n{
+        margin-left:75px;
+      }
+      
+      
+      
+  
+    .aa-price{
+      margin-left:15px;
+      text-align: center;
+      font-weight:bolder;
+      font-size:large;
+    }
+    .card-wrapper{
+      height:400px;
+    }
+    .card-wrapper .aa-properties-item {
+height: 100%;
+}
+     
+    .propertyImg {
+      max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  }
+  .btn-dark {
+  background-color: #343a40; 
+  color: #ffffff; 
+}
+  .button-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  gap: 10px; 
+}
+.xd{
+  margin-bottom:10px;
+}
+
+    </style>
+         <script>
+          function confirmDelete(propertyId) {
+            if (confirm("Are you sure you want to delete this property?")) {
+              const form = document.getElementById("deleteForm-" + propertyId);
+              form.submit();
+            }else {
+              event.preventDefault();
+       }
+          }
+          </script>
+          
+
+  </head>
+  <body class="aa-price-range">   
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                    0772645665
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span>sakanak123@gmail.com
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <% if (!isAuthenticated) { %>
+                    <a href="signin.html" class="aa-register">Login</a>
+                    <a href="register.html" class="aa-login">Register</a>
+                  <% } %>
+                  <button type="button" class="btn btn-light" id="logoutBtn" onclick="logout()">Logout</button>
+                  <!-- <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+          <a class="navbar-brand aa-logo" href="/index"><span>SAKANAK</span></a>
+          <!-- Image based logo -->
+          <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="/index">HOME</a></li>
+             <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">                
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/MyProperties"> MY PROPERTIES</a></li>                                           
+              </ul>
+            </li>
+            <li><a href="/Roommates">ROOMMATES</a></li>
+            <li><a href="/Support">CONTACT US</a></li>
+            <li><a href="/AddListing">ADD LISTING</a></li> 
+            <li><a href="/MyProfile">MY PROFILE</a></li>       
+            
+          </ul>                           
+        </div><!--/.nav-collapse -->       
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>PROPERTIES</h2>
+            <ol class="breadcrumb">
+            <li><a href="#">HOME</a></li>            
+            <li class="active">PROPERTIES</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+ <!-- Advance Search -->
+ <section id="aa-advance-search">
+  <div class="container">
+    <div class="aa-advance-search-area">
+      <div class="form">
+        <form id="searchForm" action="/properties" method="GET">
+          <div class="aa-advance-search-top">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="aa-single-advance-search">
+                  <input type="text" name="neighbourhood" id="n" placeholder="Neighbourhood">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input type="text" name="category" id="c" placeholder="e.g. duplex">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="aa-single-advance-search">
+                  <input class="aa-search-btn" type="submit" id="s" value="Search">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="aa-advance-search-bottom">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="aa-single-filter-search">
+                  <span>AREA (M)<sup>2</sup></span>
+                  <span>FROM</span>
+                  <input type="number" name="areaLower"  id="skip-value-lower" class="example-val" value="">
+                  <span>TO<input type="number" name="areaUpper" id="skip-value-upper" class="example-val" value="">
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="aa-single-filter-search">
+                  <span>PRICE (JOD)</span>
+                  <span>FROM</span>
+                  <input type="number" name="priceLower" id="skip-value-lower2" class="example-val" value="">
+                  <span>TO<input type="number" name="priceUpper" id="skip-value-upper2" class="example-val" value=""></span>
+                  
+                </div>
+              </div>
+            </div>  
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- / Properties  -->
+  <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-properties-content">
+            
+            <!-- Start properties content body -->
+            <div class="aa-properties-content-body">
+              <!-- <ul class="aa-properties-nav"> -->
+                
+                 <div class="row">
+                  <% properties.forEach(property => { %>
+                    <div class="col-md-4 card-wrapper"> 
+                    
+                      <article class="aa-properties-item">
+                        <a class="aa-properties-item-img" href="#">
+                          <img class="propertyImg" src="<%= property.image.replace('public', '') + '?' + new Date().getTime() %>" alt="Property image">
+                        </a>
+                        <div class="aa-properties-item-content">
+                          <div class="aa-properties-info">
+                            <span><%= property.rooms %> Rooms</span>
+                            <span><%= property.neighbourhood %></span>
+                            <span><%= property.category %></span>
+                            <span><%= property.area %>M<sup>2</sup></span>
+                          </div>
+                          <div class="aa-properties-about">
+                            <h3><a href="#"><%= property.title %></a></h3>                                             
+                          </div>
+                          <!-- <div class="aa-properties-detail"> -->
+                            <span class="aa-price"><%= property.price %>JOD</span>
+
+                          
+                            <div class="button-container aa-properties-detail">
+                            <% if (property.user && property.user._id.toString() === loggedInUserId) { %>
+                             <button type="submit" class="xd btn btn-secondary mt-3  btn-rounded waves-effect w-md waves-light"><a href="/editProperty/<%= property._id %>">Edit</a></button>
+                              <form id="deleteForm" action="/deleteProperty/<%= property._id %>" method="POST" class="d-inline">
+                                <button type="submit" class="xd btn btn-dark mt-3 ml-2 btn-rounded waves-effect w-md waves-light" onclick="confirmDelete('<%= property._id %>')">Delete</button>
+                              </form>
+                              <a class="xd aa-secondary-btn" href="/properties-detail/<%= property._id %>">View Details</a>
+
+                            <% } else { %>
+                              <a class="xd aa-secondary-btn" href="/properties-detail/<%= property._id %>">View Details</a>
+                            <% } %>
+                            </div>
+                          <!-- </div> -->
+                        </div>
+                      </article>
+                    
+                    </div>
+                  <% }); %>
+                  
+                  </div>
+  
+            <!-- Start properties content bottom -->
+            <div class="aa-properties-content-bottom">
+              <nav>
+                <ul class="pagination">
+                  <% if (currentPage > 1) { %>
+                    <li>
+                      <a href="/properties?page=<%= currentPage - 1 %>" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                  <% } %>
+                  <% for (let i = 1; i <= totalPages; i++) { %>
+                    <li class="<%= currentPage == i ? 'active' : '' %>"><a href="/properties?page=<%= i %>"><%= i %></a></li>
+                  <% } %>
+                  <% if (currentPage < totalPages) { %>
+                    <li>
+                      <a href="/properties?page=<%= currentPage + 1 %>" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  <% } %>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p><a rel="nofollow" href="/index">SAKANAK</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Support</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+
+ 
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Display confirmation dialog
+      var confirmLogout = confirm('Are you sure you want to logout?');
+  
+      // If user confirms logout, send a POST request to the logout endpoint
+      if (confirmLogout) {
+        fetch('/logout', { method: 'POST' })
+          .then(function(response) {
+            if (response.ok) {
+              // Redirect to the login page or handle success as needed
+              window.location.href = '/signin.html';
+            } else {
+              // Handle error
+              console.log('Logout failed.');
+            }
+          })
+          .catch(function(error) {
+            // Handle error
+            console.log('Logout failed: ' + error.message);
+          });
+      }
+    });
+  </script>
+  </body>
+</html>

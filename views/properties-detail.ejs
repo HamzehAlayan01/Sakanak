@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Sakanak | My Profile</title>
+    <base href="/">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Font awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">   
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
+
+    <!-- Main style sheet -->
+    <link href="css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= googleMapsApiKey %>&libraries=places"></script>
+    <script>
+      function initMap() {  
+        var propertyLocation = {
+          lat: parseFloat('<%= property.location.coordinates[1] %>'),
+  lng: parseFloat('<%= property.location.coordinates[0] %>')
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: propertyLocation,
+    zoom: 14
+  });
+
+  var marker = new google.maps.Marker({
+    position: propertyLocation,
+    map: map
+  });
+}
+
+        
+      document.addEventListener('DOMContentLoaded', function() {
+  initMap();
+}); 
+    </script>
+    
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    
+      .property-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.property-features li i {
+  margin-right: 5px;
+  color: green;
+}
+
+.property-features li span {
+  font-size: 14px;
+}
+    </style>
+
+  </head>
+  <body class="aa-price-range">  
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+
+  <!-- Start header section -->
+  <header id="aa-header">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                    0772645665
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span>sakanak123@gmail.com
+                  </div>
+                </div>              
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <% if (!isAuthenticated) { %>
+                    <a href="signin.html" class="aa-register">Login</a>
+                    <a href="register.html" class="aa-login">Register</a>
+                  <% } %>
+                  <button id="logoutBtn" onclick="logout()">Logout</button>
+                  <!-- <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->                                               
+          <!-- Text based logo -->
+          <a class="navbar-brand aa-logo" href="/index"><span>SAKANAK</span></a>
+          <!-- Image based logo -->
+          <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->                     
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="/index">HOME</a></li>
+             <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">                
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/MyProperties">MY PROPERTIES</a></li>                                             
+              </ul>
+            </li>
+            <li><a href="/Roommates">ROOMMATES</a></li>
+            <li class="dropdown">
+            <li><a href="/Support">CONTACT US</a></li>
+            <li><a href="/AddListing">ADD LISTING</a></li> 
+            <li><a href="/MyProfile">MY PROFILE</a></li>       
+            
+          </ul>                               
+        </div><!--/.nav-collapse -->       
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start Proerty header  -->
+
+  <section id="aa-property-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-property-header-inner">
+            <h2>Properties Details</h2>
+            <ol class="breadcrumb">
+            <li><a href="/index">HOME</a></li>            
+            <li class="active">PROPERTIES DETAILS</li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End Proerty header  -->
+
+  <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-properties-content">            
+            <!-- Start properties content body -->
+            <div class="aa-properties-details">
+             <div class="aa-properties-details-img">
+              <img  src="<%= property.image.replace('public', '') + '?' + new Date().getTime() %>" alt="Property image">
+
+               <img src="img/latest property/tvroom1.jpg" alt="img">
+               <img src="img/latest property/bedroom1.jpg" alt="img">
+             </div>
+             <div class="aa-properties-info">
+              <h2><%= property.title %></h2>
+              <span class="aa-price"><%= property.price %> JOD</span>
+              <h2>Property Description</h2>
+               <p style="text-align: left; font-size: larger;"><%= property.description %></p>
+               
+               <h2>Propery Features</h2>
+               <ul class="property-features">
+                <li><span><%= property.rooms %> Rooms</span></li>
+                <li><span><%= property.kitchens %> Kitchen</span></li>
+                <li><span><%= property.bathrooms %> Bathrooms</span></li>
+                <li><span><%= property.area %>M<sup>2</sup></span></li>
+              </ul>
+              
+               
+               <h2>Property Map</h2>
+               <div id="map"></div>
+
+               <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.4316445808727!2d<%= property.longitude %>!3d<%= property.latitude %>!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5f9b6d0df885%3A0x5ba66d57515d5d4!2sRainbow%20St.%2C%20Amman!5e0!3m2!1sen!2sjo!4v1686347820960!5m2!1sen!2sjo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+              </div>
+             
+             <ul style="text-align: left; font-weight: bold; font-size: larger;"> 
+              <h2>Contact Info</h2>
+                 <li><%= property.user.username%></li>
+                 <li><a href="mailto:<%= property.user.email %>"><%= property.user.email %></a></li>
+                <li><%= property.user.phoneNumber %></li>
+             </ul>
+             <!-- Properties social share -->
+             <div class="aa-properties-social">
+               <ul> 
+                 <li>Share</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+               </ul>
+             </div>
+             </div>
+            </div>   
+          </div>  
+        </div>
+      </div>
+    </div>
+  <!-- Footer -->
+  
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+               <p><a rel="nofollow" href="/index">SAKANAK</a></p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="/index">Home</a>
+                <a href="/Support">Contact Us</a>
+                <a href="#">License</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- / Footer -->
+  <!-- jQuery library -->
+  <script src="js/jquery.min.js"></script>   
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>   
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script> 
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+      // Display confirmation dialog
+      var confirmLogout = confirm('Are you sure you want to logout?');
+  
+      // If user confirms logout, send a POST request to the logout endpoint
+      if (confirmLogout) {
+        fetch('/logout', { method: 'POST' })
+          .then(function(response) {
+            if (response.ok) {
+              // Redirect to the login page or handle success as needed
+              window.location.href = '/signin.html';
+            } else {
+              // Handle error
+              console.log('Logout failed.');
+            }
+          })
+          .catch(function(error) {
+            // Handle error
+            console.log('Logout failed: ' + error.message);
+          });
+      }
+    }); 
+  </script>
+  </body>
+</html>
